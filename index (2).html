@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Event: โครงการจิตอาสาบุญบั้งไฟ 2569</title>
+    
+    <!-- Google Fonts: Inter สำหรับภาษาอังกฤษ และ Noto Sans Thai สำหรับภาษาไทย -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+Thai:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #ff4d4d;
+            --bg-color: #ffffff;
+            --secondary-bg: #f8f9fa;
+            --text-color: #333333;
+            --border-color: #eeeeee;
+            --success-color: #2ec4b6;
+            --warning-color: #ff9f1c;
+            --info-color: #0ea5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans Thai', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 80px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .event-label {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .event-meta {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .reg-meta {
+            display: inline-block;
+            background: #fff3f3;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .hashtag {
+            color: var(--accent-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 400px;
+            background-color: #f0f0f0;
+            background-image: url('ปก (2).jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+            margin-bottom: 60px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 15px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--secondary-bg);
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .card ul { list-style: none; }
+        .card ul li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            padding-left: 20px;
+            position: relative;
+        }
+        .card ul li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Notice Boxes */
+        .notice-box {
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .notice-box.meal {
+            background: #f0fdf4;
+            border: 1px solid var(--success-color);
+        }
+        .notice-box.meal h4 { color: #166534; margin-bottom: 10px; }
+        
+        .notice-box.bathroom {
+            background: #f0f9ff;
+            border: 1px solid var(--info-color);
+        }
+        .notice-box.bathroom h4 { color: #0369a1; margin-bottom: 10px; }
+
+        /* Groups */
+        .group-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .group-card {
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 8px;
+            background: #ffffff;
+            transition: all 0.2s;
+        }
+        .group-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .group-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .group-title { font-size: 1.2rem; color: var(--primary-color); font-weight: 600; }
+        .group-badge {
+            background: var(--secondary-bg);
+            padding: 3px 10px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        /* Maps & Floor Plans */
+        .map-section {
+            background: var(--secondary-bg);
+            border: 1px dashed #cbd5e1;
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .map-placeholder {
+            width: 100%;
+            height: 350px;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-weight: 600;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 2px dashed #94a3b8;
+        }
+
+        .building-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .main-hall {
+            border: 2px dashed #b91c1c;
+            background: #fef2f2;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .overflow-hall {
+            border: 2px dashed #d97706;
+            background: #fffbeb;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            grid-column: span 2;
+        }
+
+        .grid-beds {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            gap: 6px;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(255,255,255,0.7);
+            border-radius: 4px;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+        .bed-dot { height: 12px; border-radius: 2px; }
+        .bed-dot.male { background-color: #3b82f6; }
+        .bed-dot.female { background-color: #ec4899; }
+        .bed-dot.overflow { background-color: #f59e0b; }
+
+        .plan-legend {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            font-size: 0.85rem;
+            margin-top: 15px;
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-box { width: 16px; height: 16px; border-radius: 3px; }
+
+        /* Timeline / Itinerary */
+        .timeline-day { margin-bottom: 40px; }
+        .day-title {
+            background: var(--secondary-bg);
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .time-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+        .time {
+            min-width: 100px;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        .activity { flex: 1; }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            background: var(--primary-color);
+            color: white;
+        }
+        .footer-logo { font-weight: 600; margin-bottom: 10px; opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .cover-image { height: 250px; }
+            .time-item { flex-direction: column; }
+            .time { margin-bottom: 5px; }
+            .building-wrapper { grid-template-columns: 1fr; }
+            .overflow-hall { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="event-label">MINI EVENT</span>
+        <h1>โครงการจิตอาสาบุญบั้งไฟ จ.ขอนแก่น</h1>
+        <p class="event-meta">
+            26 – 28 มิถุนายน 2569 | ต.นาจาน อ.สีชมพู จ.ขอนแก่น<br>
+            <a href="#" class="hashtag">#RocketFestival</a>
+        </p>
+        <div class="reg-meta">
+            เปิดลงทะเบียนกิจกรรม: 15 มิถุนายน – 20 มิถุนายน 2569
+        </div>
+    </header>
+
+    <div class="cover-image">
+        <!-- เปลี่ยน URL ภาพที่ background-image ใน CSS -->
+    </div>
+
+    <section id="objective">
+        <h2>วัตถุประสงค์โครงการ</h2>
+        <div class="grid">
+            <div class="card">
+                <ul>
+                    <li>เรียนรู้วัฒนธรรมประเพณีบุญบั้งไฟภาคอีสาน ณ ชุมชนตำบลนาจาน</li>
+                    <li>ส่งเสริมการทำงานจิตอาสาระหว่างมหาวิทยาลัย</li>
+                    <li>สร้างความสัมพันธ์อันดีระหว่างสถาบัน</li>
+                    <li>สนับสนุนกิจกรรมชุมชนและสืบสานประเพณี</li>
+                    <li>เรียนรู้การทำงานเป็นทีมและความรับผิดชอบ</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="responsibilities">
+        <h2>การแบ่งหน้าที่และความรับผิดชอบอย่างละเอียด</h2>
+        <p style="margin-bottom: 20px; color: var(--accent-color); font-weight: 600;">
+            * หมายเหตุ: สมาชิกทุกคนต้องตรวจสอบและทราบฝ่ายตนเองให้เรียบร้อยก่อนเดินทางไปถึงจังหวัดขอนแก่น *
+        </p>
+
+        <div class="notice-box meal">
+            <h4>🍲 ข้อตกลงเรื่องอาหารการกินภายในค่าย</h4>
+            <p style="font-size: 0.95rem; color: #1e293b;">
+                <strong>มื้อเช้า และ มื้อเย็น:</strong> สมาชิกในแต่ละกลุ่ม (กลุ่ม A - E) จะต้องจัดสรรหน้าที่และช่วยกันทำอาหารกินกันเองภายในกลุ่ม <span style="color:var(--accent-color); font-weight:bold;">(ยกเว้นมื้อเย็นของวันแรกที่มีอาหารจัดเลี้ยงต้อนรับ)</span><br>
+                <strong>มื้อกลางวัน:</strong> ร่วมรับประทานอาหารกลางวัน ณ วัดในชุมชน โดยได้รับความเมตตาจากหลวงพ่อเจ้าอาวาสเป็นผู้เลี้ยงดูแลทีมงานจิตอาสาทุกคน
+            </p>
+        </div>
+
+        <div class="group-grid">
+            <!-- Group A -->
+            <div class="group-card">
+                <div class="group-header">
+                    <span class="group-title">กลุ่ม A: ฝ่ายวัสดุ & บั้งไฟหลัก</span>
+                    <span class="group-badge">ภารกิจหลัก</span>
+                </div>
+                <ul class="card" style="background:none; padding:0;">
+                    <li>ต้องช่วยช่างชุมชนและชาวบ้านทำบั้งไฟอย่างใกล้ชิด (เรียนรู้ขั้นตอนตั้งแต่เริ่มจนจบ)</li>
+                    <li>รับผิดชอบขนย้ายไม้ไผ่ของมหาวิทยาลัยเตรียมไปขอนแก่น <strong>(ต้องแบ่งกำลังคนส่วนหนึ่งไปนั่งรถบรรทุก 10 ล้อเพื่อดูแลไม้ไผ่ระหว่างทาง)</strong></li>
+                    <li>จัดเตรียมอุปกรณ์ ตัดไม้ และดูแลความเรียบร้อยของพื้นที่ทำงาน</li>
+                    <li style="font-weight: 600; color: #166534;">ทำอาหารร่วมกันในกลุ่ม (เช้า-เย็น)</li>
+                </ul>
+            </div>
+
+            <!-- Group B -->
+            <div class="group-card">
+                <div class="group-header">
+                    <span class="group-title">กลุ่ม B: ฝ่ายประกอบโครงสร้าง</span>
+                    <span class="group-badge">ภารกิจหลัก</span>
+                </div>
+                <ul class="card" style="background:none; padding:0;">
+                    <li>ประสานงานและช่วยช่างชุมชนประกอบชิ้นส่วนฐานและตัวบั้งไฟ</li>
+                    <li>ดูแลความปลอดภัยของโครงสร้างบั้งไฟร่วมกับชาวบ้านในพื้นที่</li>
+                    <li>จัดเตรียมพื้นที่และช่วยลำเลียงบั้งไฟไปยังฐานสำหรับขั้นตอนการจุดและทดสอบ</li>
+                    <li style="font-weight: 600; color: #166534;">ทำอาหารร่วมกันในกลุ่ม (เช้า-เย็น)</li>
+                </ul>
+            </div>
+
+            <!-- Group C -->
+            <div class="group-card">
+                <div class="group-header">
+                    <span class="group-title">กลุ่ม C: ฝ่ายศิลป์ & ตกแต่งลวดลาย</span>
+                    <span class="group-badge">ภารกิจหลัก</span>
+                </div>
+                <ul class="card" style="background:none; padding:0;">
+                    <li>รับผิดชอบตกแต่งลวดลายบั้งไฟ (ตัดกระดาษ ทาสี) ให้สวยงามตามวัฒนธรรม</li>
+                    <li>ช่วยจัดเตรียมและตกแต่งขบวนแห่บั้งไฟของชุมชนให้มีความพร้อมสมบูรณ์</li>
+                    <li>ดูแลความสวยงามของเสื้อผ้า/เครื่องแต่งกายในขบวนแห่</li>
+                    <li style="font-weight: 600; color: #166534;">ทำอาหารร่วมกันในกลุ่ม (เช้า-เย็น)</li>
+                </ul>
+            </div>
+
+            <!-- Group D -->
+            <div class="group-card">
+                <div class="group-header">
+                    <span class="group-title">กลุ่ม D: ฝ่ายช่วยเหลือชาวบ้านจิปาถะ</span>
+                    <span class="group-badge">ฝ่ายสนับสนุนชุมชน</span>
+                </div>
+                <ul class="card" style="background:none; padding:0;">
+                    <li>ช่วยชาวบ้านจัดเตรียมสถานที่จัดงานและลานกิจกรรมของชุมชน</li>
+                    <li><strong>ช่วยแม่ครัวที่วัดทำอาหาร และช่วยชาวบ้านทำขนมพื้นบ้านสำหรับงานบุญ</strong></li>
+                    <li><strong>เข้าร่วมเดินในขบวนแห่บั้งไฟร่วมกับชุมชนอย่างสนุกสนานและเรียบร้อย</strong></li>
+                    <li>ประสานงานอำนวยความสะดวกระหว่างชาวบ้านและทีมงานจิตอาสา</li>
+                    <li style="font-weight: 600; color: #166534;">ทำอาหารร่วมกันในกลุ่ม (เช้า-เย็น)</li>
+                </ul>
+            </div>
+
+            <!-- Group E -->
+            <div class="group-card">
+                <div class="group-header">
+                    <span class="group-title">กลุ่ม E: ฝ่ายสนับสนุน & พยาบาล</span>
+                    <span class="group-badge">ส่วนกลาง</span>
+                </div>
+                <ul class="card" style="background:none; padding:0;">
+                    <li>ดูแลเสบียงกลาง วัตถุดิบทำอาหาร และแจกจ่ายน้ำดื่มรวมของโครงการในทุกจุดปฏิบัติงาน</li>
+                    <li>ปฐมพยาบาลเบื้องต้น ดูแลจัดเตรียมยาสามัญประจำบ้านและจุดพักฟื้นให้ทีมงาน</li>
+                    <li>คอยเฝ้าระวังความปลอดภัย สังเกตอาการฮีทสโตรก และสภาวะสุขภาพของเพื่อน ๆ สมาชิกค่าย</li>
+                    <li style="font-weight: 600; color: #166534;">ทำอาหารร่วมกันในกลุ่ม (เช้า-เย็น)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="accommodation">
+        <h2>ระเบียบที่พัก แผนผัง และการจัดสรรพื้นที่</h2>
+
+        <div class="card" style="margin-bottom:30px; border-left: 4px solid var(--accent-color);">
+            <p style="font-size: 0.95rem; font-weight: 600; color: #1a1a1a;">
+                ⚠️ กฎเหล็กเรื่องที่พักอาศัย:<br>
+                ที่นอนทั้งหมดทีมงานได้จัดเตรียมไว้ให้ครบถ้วนแล้ว ไม่อนุญาตให้พกเต็นท์มาเอง ไม่อนุญาตให้หนีกลับก่อนกำหนด และไม่อนุญาตให้แยกตัวไปพักตามโรงแรม อพาร์ทเม้นท์ หรือโฮสเทลภายนอกโดยเด็ดขาด <span style="color:var(--success-color);">(ข้อยกเว้น: หากสมาชิกท่านใดมีเพื่อนหรือญาติที่มีบ้านพักอยู่ในละแวกชุมชนนั้นจริง ๆ อนุญาตให้ไปพักอาศัยด้วยกันได้)</span>
+            </p>
+        </div>
+
+        <!-- กฎระเบียบห้องน้ำ/อาบน้ำ -->
+        <div class="notice-box bathroom">
+            <h4>🚿 ระเบียบการใช้ห้องน้ำและพื้นที่อาบน้ำ</h4>
+            <p style="font-size: 0.95rem; color: #0f172a;">
+                เพื่อความเป็นระเบียบและสวัสดิภาพของสมาชิกทุกคน <strong>การใช้งานห้องน้ำและการอาบน้ำจะแยกชาย-หญิงคนละฝั่งอย่างชัดเจน</strong> ขอความร่วมมือสมาชิกทุกท่านใช้พื้นที่และห้องน้ำตามโซนที่กำหนดไว้เท่านั้น ห้ามเดินข้ามโซนโดยเด็ดขาด
+            </p>
+        </div>
+
+        <!-- กรอบใส่แผนผังมหาวิทยาลัยช่อแก้ว -->
+        <div class="map-section">
+            <h3 style="color: var(--primary-color); margin-bottom: 5px;">🗺️ แผนผังมหาวิทยาลัยช่อแก้ว</h3>
+            <p style="font-size: 0.9rem; color: #666;">จุดจัดกิจกรรม หอประชุม ห้องน้ำแยกโซน และพื้นที่ส่วนกลาง</p>
+            <div class="map-placeholder">
+                [ นำรูปภาพแผนผังมหาวิทยาลัยช่อแก้วมาใส่ตรงนี้ ]
+            </div>
+        </div>
+
+        <p style="font-size: 0.95rem; margin-bottom: 15px; margin-top: 40px;">
+            การจัดนอนจะแยกส่วนชาย-หญิงอย่างชัดเจน ภายในพื้นที่ <strong>หอประชุมช่อแก้ว</strong> โดยแบ่งโควตาดังนี้:
+        </p>
+
+        <!-- ผังจำลองที่นอน (Visual Layout) -->
+        <div class="map-section" style="background: var(--bg-color); border: 1px solid var(--border-color);">
+            <h4 style="text-align:center; margin-bottom: 20px; color: var(--primary-color);">ผังจำลองการจัดสรรพื้นที่นอน อาคารหอประชุมช่อแก้ว</h4>
+            
+            <div class="building-wrapper">
+                <!-- โซนหญิง แอร์ -->
+                <div class="main-hall" style="border-color: #ec4899; background: #fdf2f8;">
+                    <strong>โซนหญิง (ห้องแอร์)</strong><br>
+                    <small>รองรับได้ 160 ที่นอน</small>
+                    <div class="grid-beds">
+                        <script>
+                            for(let i=0; i<40; i++) document.write('<div class="bed-dot female"></div>');
+                        </script>
+                    </div>
+                </div>
+
+                <!-- โซนชาย แอร์ -->
+                <div class="main-hall" style="border-color: #3b82f6; background: #eff6ff;">
+                    <strong>โซนชาย (ห้องแอร์)</strong><br>
+                    <small>รองรับได้ 230 ที่นอน</small>
+                    <div class="grid-beds">
+                        <script>
+                            for(let i=0; i<50; i++) document.write('<div class="bed-dot male"></div>');
+                        </script>
+                    </div>
+                </div>
+
+                <!-- โซนชาย สำรอง (พัดลม) -->
+                <div class="overflow-hall">
+                    <strong>โซนชายสำรอง อาคารฝั่งพัดลม (สำหรับผู้จองแอร์ไม่ทัน)</strong><br>
+                    <small>จัดเตรียมที่นอนมาตรฐานเดียวกัน อากาศถ่ายเทไม่ร้อน มีมุ้งกางให้ครบทุกตำแหน่ง</small>
+                    <div class="grid-beds" style="grid-template-columns: repeat(20, 1fr);">
+                        <script>
+                            for(let i=0; i<30; i++) document.write('<div class="bed-dot overflow"></div>');
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan-legend">
+                <div class="legend-item"><div class="legend-box" style="background:#ec4899;"></div> หญิง (แอร์) 160 ที่</div>
+                <div class="legend-item"><div class="legend-box" style="background:#3b82f6;"></div> ชาย (แอร์) 230 ที่</div>
+                <div class="legend-item"><div class="legend-box" style="background:#f59e0b;"></div> ชายสำรอง (พัดลม + มุ้ง)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="itinerary">
+        <h2>กำหนดการกิจกรรมอย่างละเอียด</h2>
+
+        <!-- Day 1 -->
+        <div class="timeline-day">
+            <div class="day-title">
+                <span>วันที่ 26 มิถุนายน 2569</span>
+                <small>กรุงเทพฯ - ต.นาจาน อ.สีชมพู</small>
+            </div>
+            <div class="time-item">
+                <div class="time">04:00 น.</div>
+                <div class="activity">
+                    พร้อมกัน ณ จุดนัดหมาย ลงทะเบียน และโหลดสัมภาระขึ้นรถบัส<br>
+                    <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; display: inline-block; margin-top: 5px;">
+                        📌 การเดินทางด้วยรถบัส จะทำการแยกคันตามมหาวิทยาลัยอย่างชัดเจน
+                    </span>
+                </div>
+            </div>
+            <div class="time-item">
+                <div class="time">05:00 น.</div>
+                <div class="activity">ออกเดินทางจากกรุงเทพฯ มุ่งสู่จังหวัดขอนแก่น</div>
+            </div>
+            <div class="time-item">
+                <div class="time">15:00 น.</div>
+                <div class="activity">เดินทางถึงมหาวิทยาลัยช่อแก้ว แยกย้ายเข้าที่นอนตามผังและจุดลงทะเบียนที่กำหนด</div>
+            </div>
+            <div class="time-item">
+                <div class="time">17:30 น.</div>
+                <div class="activity" style="color: #166534; font-weight: 600;">รับประทานอาหารเย็นร่วมกัน (มีอาหารจัดเลี้ยงต้อนรับจากทางโครงการ)</div>
+            </div>
+            <div class="time-item">
+                <div class="time">19:00 น.</div>
+                <div class="activity">
+                    <strong>กิจกรรมปฐมนิเทศ ชี้แจงแผนงานค่าย และร่วมกิจกรรมสานสัมพันธ์ของมหาวิทยาลัยช่อแก้ว (Night Activity)</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="timeline-day">
+            <div class="day-title">
+                <span>วันที่ 27 มิถุนายน 2569</span>
+                <small>ลงพื้นที่ปฏิบัติงานจิตอาสาเต็มวัน</small>
+            </div>
+            <div class="time-item">
+                <div class="time">07:00 น.</div>
+                <div class="activity">ประกอบอาหารและรับประทานอาหารเช้าร่วมกันภายในกลุ่มแต่ละฝ่าย</div>
+            </div>
+            <div class="time-item">
+                <div class="time">09:30 น.</div>
+                <div class="activity">เข้าพื้นที่ชุมชน ต.นาจาน รับฟังคำชี้แจงและแบ่งพิกัดงานร่วมกับชาวบ้านในพื้นที่</div>
+            </div>
+            <div class="time-item">
+                <div class="time">10:00 น.</div>
+                <div class="activity">
+                    <strong>แยกย้ายปฏิบัติงานตามกลุ่มฝ่าย (A - E)</strong> ที่กำหนดไว้ล่วงหน้า
+                </div>
+            </div>
+            <div class="time-item">
+                <div class="time">12:00 น.</div>
+                <div class="activity" style="color: #166534; font-weight: 600;">พักรับประทานอาหารกลางวัน ณ วัดในชุมชน (หลวงพ่อเจ้าอาวาสเมตตาจัดเลี้ยงกลุ่มจิตอาสา)</div>
+            </div>
+            <div class="time-item">
+                <div class="time">13:00 น.</div>
+                <div class="activity">ลุยงานช่วงบ่าย ตกแต่ง ลำเลียง และเตรียมความพร้อมขั้นสุดท้ายของขบวนบั้งไฟ</div>
+            </div>
+            <div class="time-item">
+                <div class="time">17:00 น.</div>
+                <div class="activity">เดินทางกลับที่พัก และทำอาหารเย็นรับประทานร่วมกันภายในกลุ่ม</div>
+            </div>
+            <div class="time-item">
+                <div class="time">19:30 น.</div>
+                <div class="activity">Reflection สรุปกิจกรรมและแลกเปลี่ยนประสบการณ์ ณ หอประชุมช่อแก้ว</div>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="timeline-day">
+            <div class="day-title">
+                <span>วันที่ 28 มิถุนายน 2569</span>
+                <small>ร่วมงานประเพณี - เดินทางกลับ</small>
+            </div>
+            <div class="time-item">
+                <div class="time">07:00 น.</div>
+                <div class="activity">ทำอาหารและรับประทานอาหารเช้าร่วมกันภายในกลุ่ม เก็บสัมภาระเคลียร์พื้นที่นอน</div>
+            </div>
+            <div class="time-item">
+                <div class="time">08:30 น.</div>
+                <div class="activity">เข้าชมขบวนแห่บั้งไฟสุดยิ่งใหญ่ตระการตา และการแสดงวัฒนธรรมพื้นบ้านของชาวสีชมพู</div>
+            </div>
+            <div class="time-item">
+                <div class="time">12:00 น.</div>
+                <div class="activity">รับประทานอาหารกลางวันร่วมกับชาวบ้านในพื้นที่งาน</div>
+            </div>
+            <div class="time-item">
+                <div class="time">14:00 น.</div>
+                <div class="activity">รวมตัวตรวจสอบจำนวนสมาชิก โหลดสัมภาระขึ้นรถบัส (กลับตามรถบัสของมหาวิทยาลัยตนเอง) และออกเดินทางกลับกรุงเทพฯ</div>
+            </div>
+            <div class="time-item">
+                <div class="time">22:00 น.</div>
+                <div class="activity">เดินทางถึงกรุงเทพฯ โดยสวัสดิภาพและอิ่มบุญ</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preparation">
+        <h2>ระเบียบ & สิ่งที่ต้องเตรียมตัว</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>กฎระเบียบค่าย</h3>
+                <ul>
+                    <li>ตรงต่อเวลาในทุกจุดนัดหมายและแต่งกายสุภาพรัดกุม</li>
+                    <li>เคารพขนบธรรมเนียม วิถีชุมชน และดูแลทรัพย์สินมีค่าส่วนตัว</li>
+                    <li>ปฏิบัติตามกฎที่พักและห้องน้ำอย่างเคร่งครัด</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>สิ่งที่ต้องเตรียม</h3>
+                <ul>
+                    <li>เสื้อผ้าสำหรับทำกิจกรรมลุยงาน (3 วัน 2 คืน)</li>
+                    <li>รองเท้าผ้าใบ (บังคับเพื่อความปลอดภัยในการทำงาน)</li>
+                    <li>ของใช้ส่วนตัว, อุปกรณ์อาบน้ำ, ยาประจำตัว, Power Bank</li>
+                    <li>อุปกรณ์ป้องกันแสงแดดและฝน (ร่ม, หมวก, เสื้อกันฝน)</li>
+		<li>ยาประจำตัว</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-logo">มหาวิทยาลัยสิบศิลป์สิริศาสตร์ x มหาวิทยาลัยเบงจันทร์</div>
+        <p style="font-size: 0.9rem; opacity: 0.6;">ร่วมกับ มหาวิทยาลัยช่อแก้ว & ชุมชนตำบลนาจาน อำเภอสีชมพู</p>
+        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Volunteer Rocket Festival Project. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
