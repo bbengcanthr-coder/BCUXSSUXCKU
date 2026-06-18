@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Event: โครงการจิตอาสาบุญบั้งไฟ 2569</title>
     
-    <!-- Google Fonts: Inter สำหรับภาษาอังกฤษ และ Noto Sans Thai สำหรับภาษาไทย -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+Thai:wght@300;400;600&display=swap" rel="stylesheet">
@@ -45,7 +44,7 @@
 
         /* Header */
         header {
-            padding: 80px 0 40px;
+            padding: 60px 0 30px;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
         }
@@ -57,20 +56,20 @@
             padding: 5px 15px;
             font-size: 0.85rem;
             letter-spacing: 1px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-transform: uppercase;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 600;
             margin-bottom: 15px;
             color: var(--primary-color);
-            line-height: 1.2;
+            line-height: 1.3;
         }
 
         .event-meta {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #666;
             margin-bottom: 20px;
         }
@@ -83,8 +82,8 @@
             padding: 8px 20px;
             border-radius: 20px;
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 30px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
         }
 
         .hashtag {
@@ -100,18 +99,18 @@
             background-image: url('สีเหลือง สีฟ้า สนุกสนาน วินเทจ เทศกาล บุญบั้งไฟ Facebook โพสต์.jpg');
             background-size: cover;
             background-position: center;
-            border-radius: 4px;
-            margin-bottom: 60px;
+            border-radius: 8px;
+            margin-bottom: 40px;
         }
 
         section {
-            padding: 60px 0;
+            padding: 50px 0;
             border-bottom: 1px solid var(--border-color);
         }
 
         h2 {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
             position: relative;
             padding-left: 15px;
             border-left: 4px solid var(--accent-color);
@@ -120,18 +119,18 @@
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
         .card {
             background: var(--secondary-bg);
-            padding: 25px;
+            padding: 20px;
             border-radius: 8px;
         }
 
         .card h3 {
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--primary-color);
         }
 
@@ -139,7 +138,7 @@
         .card ul li {
             margin-bottom: 10px;
             font-size: 0.95rem;
-            padding-left: 20px;
+            padding-left: 18px;
             position: relative;
         }
         .card ul li::before {
@@ -152,9 +151,9 @@
 
         /* Notice Boxes */
         .notice-box {
-            padding: 20px;
+            padding: 18px;
             border-radius: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         .notice-box.meal {
             background: #f0fdf4;
@@ -167,6 +166,12 @@
             border: 1px solid var(--info-color);
         }
         .notice-box.bathroom h4 { color: #0369a1; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        
+        .notice-box.warning {
+            background: #fffbeb;
+            border: 1px solid var(--warning-color);
+        }
+        .notice-box.warning h4 { color: #b45309; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
 
         /* Groups */
         .group-grid {
@@ -178,7 +183,7 @@
 
         .group-card {
             border: 1px solid var(--border-color);
-            padding: 25px;
+            padding: 20px;
             border-radius: 8px;
             background: #ffffff;
             transition: all 0.2s;
@@ -197,28 +202,29 @@
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
-        .group-title { font-size: 1.2rem; color: var(--primary-color); font-weight: 600; }
+        .group-title { font-size: 1.1rem; color: var(--primary-color); font-weight: 600; }
         .group-badge {
             background: var(--secondary-bg);
-            padding: 3px 10px;
+            padding: 3px 8px;
             font-size: 0.8rem;
             border-radius: 4px;
             border: 1px solid #ddd;
+            white-space: nowrap;
         }
 
         /* Maps & Floor Plans */
         .map-section {
             background: var(--secondary-bg);
             border: 1px dashed #cbd5e1;
-            padding: 30px 20px;
+            padding: 25px 15px;
             border-radius: 8px;
             margin-bottom: 30px;
             text-align: center;
         }
         
         .map-image-wrapper {
-            margin-top: 20px;
-            padding: 10px;
+            margin-top: 15px;
+            padding: 8px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -236,7 +242,7 @@
         .building-wrapper {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 20px;
             text-align: left;
         }
@@ -244,7 +250,7 @@
         .main-hall {
             border: 2px dashed #b91c1c;
             background: #fef2f2;
-            padding: 20px;
+            padding: 15px;
             border-radius: 6px;
             text-align: center;
         }
@@ -252,7 +258,7 @@
         .overflow-hall {
             border: 2px dashed #d97706;
             background: #fffbeb;
-            padding: 20px;
+            padding: 15px;
             border-radius: 6px;
             text-align: center;
             grid-column: span 2;
@@ -260,8 +266,8 @@
 
         .grid-beds {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-            gap: 6px;
+            grid-template-columns: repeat(auto-fill, minmax(15px, 1fr));
+            gap: 5px;
             margin-top: 15px;
             padding: 10px;
             background: rgba(255,255,255,0.7);
@@ -269,63 +275,87 @@
             max-height: 120px;
             overflow-y: auto;
         }
-        .bed-dot { height: 12px; border-radius: 2px; }
+        .bed-dot { height: 15px; border-radius: 2px; }
         .bed-dot.male { background-color: #3b82f6; }
         .bed-dot.female { background-color: #ec4899; }
         .bed-dot.overflow { background-color: #f59e0b; }
 
         .plan-legend {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             font-size: 0.85rem;
             margin-top: 15px;
             flex-wrap: wrap;
         }
-        .legend-item { display: flex; align-items: center; gap: 6px; }
-        .legend-box { width: 16px; height: 16px; border-radius: 3px; }
+        .legend-item { display: flex; align-items: center; gap: 5px; }
+        .legend-box { width: 14px; height: 14px; border-radius: 3px; }
 
         /* Timeline / Itinerary */
-        .timeline-day { margin-bottom: 40px; }
+        .timeline-day { margin-bottom: 30px; }
         .day-title {
             background: var(--secondary-bg);
             padding: 15px 20px;
             border-radius: 4px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .time-item {
             display: flex;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
             border-bottom: 1px dashed #ddd;
         }
         .time {
-            min-width: 100px;
+            min-width: 90px;
             font-weight: 600;
             color: var(--accent-color);
         }
-        .activity { flex: 1; }
+        .activity { flex: 1; font-size: 0.95rem; }
 
         /* Footer */
         footer {
-            padding: 60px 0;
+            padding: 40px 0;
             text-align: center;
             background: var(--primary-color);
             color: white;
         }
-        .footer-logo { font-weight: 600; margin-bottom: 10px; opacity: 0.8; }
+        .footer-logo { font-weight: 600; margin-bottom: 8px; opacity: 0.9; }
 
+        /* Mobile Responsive Adjustments */
         @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .cover-image { height: 250px; }
-            .time-item { flex-direction: column; }
-            .time { margin-bottom: 5px; }
+            header { padding: 40px 0 20px; }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            .cover-image { height: 220px; margin-bottom: 30px; }
+            
+            .group-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
             .building-wrapper { grid-template-columns: 1fr; }
             .overflow-hall { grid-column: span 1; }
+            
+            .day-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .time-item { flex-direction: column; }
+            .time { margin-bottom: 5px; }
+            
+            .plan-legend {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 20px;
+            }
+            
+            .reg-meta { font-size: 0.85rem; padding: 6px 15px; }
         }
     </style>
 </head>
@@ -345,8 +375,7 @@
     </header>
 
     <div class="cover-image">
-        <!-- เปลี่ยน URL ภาพที่ background-image ใน CSS -->
-    </div>
+        </div>
 
     <section id="objective">
         <h2>วัตถุประสงค์โครงการ</h2>
@@ -365,7 +394,7 @@
 
     <section id="responsibilities">
         <h2>การแบ่งหน้าที่และความรับผิดชอบอย่างละเอียด</h2>
-        <p style="margin-bottom: 20px; color: var(--accent-color); font-weight: 600;">
+        <p style="margin-bottom: 20px; color: var(--accent-color); font-weight: 600; font-size: 0.95rem;">
             * หมายเหตุ: สมาชิกทุกคนต้องตรวจสอบและทราบฝ่ายตนเองให้เรียบร้อยก่อนเดินทางไปถึงจังหวัดขอนแก่น *
         </p>
 
@@ -379,7 +408,6 @@
         </div>
 
         <div class="group-grid">
-            <!-- Group A -->
             <div class="group-card">
                 <div class="group-header">
                     <span class="group-title">กลุ่ม A: ฝ่ายวัสดุ & บั้งไฟหลัก</span>
@@ -393,7 +421,6 @@
                 </ul>
             </div>
 
-            <!-- Group B -->
             <div class="group-card">
                 <div class="group-header">
                     <span class="group-title">กลุ่ม B: ฝ่ายประกอบโครงสร้าง</span>
@@ -407,7 +434,6 @@
                 </ul>
             </div>
 
-            <!-- Group C -->
             <div class="group-card">
                 <div class="group-header">
                     <span class="group-title">กลุ่ม C: ฝ่ายศิลป์ & ตกแต่งลวดลาย</span>
@@ -421,7 +447,6 @@
                 </ul>
             </div>
 
-            <!-- Group D -->
             <div class="group-card">
                 <div class="group-header">
                     <span class="group-title">กลุ่ม D: ฝ่ายช่วยเหลือชาวบ้านจิปาถะ</span>
@@ -437,7 +462,6 @@
                 </ul>
             </div>
 
-            <!-- Group E -->
             <div class="group-card">
                 <div class="group-header">
                     <span class="group-title">กลุ่ม E: ฝ่ายสนับสนุน & พยาบาล</span>
@@ -456,14 +480,17 @@
     <section id="accommodation">
         <h2>ระเบียบที่พัก แผนผัง และการจัดสรรพื้นที่</h2>
 
-        <div class="card" style="margin-bottom:30px; border-left: 4px solid var(--accent-color);">
-            <p style="font-size: 0.95rem; font-weight: 600; color: #1a1a1a;">
-                ⚠️ กฎเหล็กเรื่องที่พักอาศัย:<br>
-                ที่นอนทั้งหมดทีมงานได้จัดเตรียมไว้ให้ครบถ้วนแล้ว ไม่อนุญาตให้พกเต็นท์มาเอง ไม่อนุญาตให้หนีกลับก่อนกำหนด และไม่อนุญาตให้แยกตัวไปพักตามโรงแรม อพาร์ทเม้นท์ หรือโฮสเทลภายนอกโดยเด็ดขาด <span style="color:var(--success-color);">(ข้อยกเว้น: หากสมาชิกท่านใดมีเพื่อนหรือญาติที่มีบ้านพักอยู่ในละแวกชุมชนนั้นจริง ๆ อนุญาตให้ไปพักอาศัยด้วยกันได้)</span>
+        <div class="card" style="margin-bottom:25px; border-left: 4px solid var(--accent-color);">
+            <p style="font-size: 0.95rem; color: #1a1a1a;">
+                <strong style="font-size: 1rem;">⚠️ กฎเหล็กเรื่องที่พักอาศัย:</strong><br><br>
+                ที่นอนทั้งหมดทีมงานได้จัดเตรียมไว้ให้ครบถ้วนแล้ว ไม่อนุญาตให้พกเต็นท์มาเอง ไม่อนุญาตให้หนีกลับก่อนกำหนด และไม่อนุญาตให้แยกตัวไปพักตามโรงแรม อพาร์ทเม้นท์ หรือโฮสเทลภายนอกโดยเด็ดขาด 
+                <br><br>
+                <strong style="color: var(--accent-color);">สาเหตุที่ไม่อยากให้ออกไปพักด้านนอกและพกอุปกรณ์มานอนเอง เพราะไม่อยากให้เกิดปัญหาความปลอดภัยหรือเหตุสุดวิสัยที่อยู่นอกเหนือขอบเขตที่ทางเราจะสามารถดูแลได้</strong>
+                <br><br>
+                <span style="color:var(--success-color); font-weight: 600;">(ข้อยกเว้น: หากสมาชิกท่านใดมีเพื่อนหรือญาติที่มีบ้านพักอยู่ในละแวกชุมชนนั้นจริง ๆ อนุญาตให้ไปพักอาศัยด้วยกันได้)</span>
             </p>
         </div>
 
-        <!-- กฎระเบียบห้องน้ำ/อาบน้ำ -->
         <div class="notice-box bathroom">
             <h4>🚿 ระเบียบการใช้ห้องน้ำและพื้นที่อาบน้ำ</h4>
             <p style="font-size: 0.95rem; color: #0f172a;">
@@ -471,28 +498,24 @@
             </p>
         </div>
 
-        <!-- กรอบใส่แผนผังมหาวิทยาลัยช่อแก้ว (.png) -->
         <div class="map-section">
-            <h3 style="color: var(--primary-color); margin-bottom: 5px;">🗺️ แผนผังมหาวิทยาลัยช่อแก้ว</h3>
+            <h3 style="color: var(--primary-color); margin-bottom: 5px; font-size: 1.1rem;">🗺️ แผนผังมหาวิทยาลัยช่อแก้ว</h3>
             <p style="font-size: 0.9rem; color: #666;">จุดจัดกิจกรรม หอประชุม ห้องน้ำแยกโซน และพื้นที่ส่วนกลาง</p>
             
             <div class="map-image-wrapper">
-                <!-- ใส่ชื่อไฟล์ PNG ของคุณตรง src -->
                 <img src="MAP.png" alt="แผนผังมหาวิทยาลัยช่อแก้ว">
             </div>
             <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 10px;">* แผนที่แสดงโซนห้องน้ำแยกชาย-หญิง และอาคารหอประชุมช่อแก้ว</p>
         </div>
 
-        <p style="font-size: 0.95rem; margin-bottom: 15px; margin-top: 40px;">
+        <p style="font-size: 0.95rem; margin-bottom: 15px; margin-top: 30px;">
             การจัดนอนจะแยกส่วนชาย-หญิงอย่างชัดเจน ภายในพื้นที่ <strong>หอประชุมช่อแก้ว</strong> โดยแบ่งโควตาดังนี้:
         </p>
 
-        <!-- ผังจำลองที่นอน (Visual Layout) -->
         <div class="map-section" style="background: var(--bg-color); border: 1px solid var(--border-color);">
-            <h4 style="text-align:center; margin-bottom: 20px; color: var(--primary-color);">ผังจำลองการจัดสรรพื้นที่นอน อาคารหอประชุมช่อแก้ว</h4>
+            <h4 style="text-align:center; margin-bottom: 20px; color: var(--primary-color); font-size: 1rem;">ผังจำลองการจัดสรรพื้นที่นอน อาคารหอประชุมช่อแก้ว</h4>
             
             <div class="building-wrapper">
-                <!-- โซนหญิง แอร์ -->
                 <div class="main-hall" style="border-color: #ec4899; background: #fdf2f8;">
                     <strong>โซนหญิง (ห้องแอร์)</strong><br>
                     <small>รองรับได้ 160 ที่นอน</small>
@@ -503,7 +526,6 @@
                     </div>
                 </div>
 
-                <!-- โซนชาย แอร์ -->
                 <div class="main-hall" style="border-color: #3b82f6; background: #eff6ff;">
                     <strong>โซนชาย (ห้องแอร์)</strong><br>
                     <small>รองรับได้ 230 ที่นอน</small>
@@ -514,13 +536,12 @@
                     </div>
                 </div>
 
-                <!-- โซนชาย สำรอง (พัดลม) -->
                 <div class="overflow-hall">
                     <strong>โซนชายสำรอง อาคารฝั่งพัดลม (สำหรับผู้จองแอร์ไม่ทัน)</strong><br>
                     <small>จัดเตรียมที่นอนมาตรฐานเดียวกัน อากาศถ่ายเทไม่ร้อน มีมุ้งกางให้ครบทุกตำแหน่ง</small>
-                    <div class="grid-beds" style="grid-template-columns: repeat(20, 1fr);">
+                    <div class="grid-beds">
                         <script>
-                            for(let i=0; i<30; i++) document.write('<div class="bed-dot overflow"></div>');
+                            for(let i=0; i<40; i++) document.write('<div class="bed-dot overflow"></div>');
                         </script>
                     </div>
                 </div>
@@ -537,7 +558,11 @@
     <section id="itinerary">
         <h2>กำหนดการกิจกรรมอย่างละเอียด</h2>
 
-        <!-- Day 1 -->
+        <div class="notice-box warning">
+            <h4>⏳ ประกาศเพิ่มเติม</h4>
+            <p style="font-size: 0.95rem; color: #451a03;">ข้อมูลกำหนดการและกิจกรรมของฝั่ง <strong>มหาวิทยาลัยช่อแก้ว</strong> จะมีการอัปเดตและเพิ่มข้อมูลลงในส่วนนี้อีกครั้งในภายหลัง</p>
+        </div>
+
         <div class="timeline-day">
             <div class="day-title">
                 <span>วันที่ 26 มิถุนายน 2569</span>
@@ -547,7 +572,7 @@
                 <div class="time">04:00 น.</div>
                 <div class="activity">
                     พร้อมกัน ณ จุดนัดหมาย ลงทะเบียน และโหลดสัมภาระขึ้นรถบัส<br>
-                    <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; display: inline-block; margin-top: 5px;">
+                    <span style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem; display: inline-block; margin-top: 5px;">
                         📌 การเดินทางด้วยรถบัส จะทำการแยกคันตามมหาวิทยาลัยอย่างชัดเจน
                     </span>
                 </div>
@@ -574,7 +599,6 @@
             </div>
         </div>
 
-        <!-- Day 2 -->
         <div class="timeline-day">
             <div class="day-title">
                 <span>วันที่ 27 มิถุนายน 2569</span>
@@ -612,7 +636,6 @@
             </div>
         </div>
 
-        <!-- Day 3 -->
         <div class="timeline-day">
             <div class="day-title">
                 <span>วันที่ 28 มิถุนายน 2569</span>
@@ -648,7 +671,6 @@
                 <h3>กฎระเบียบค่าย</h3>
                 <ul>
                     <li>ตรงต่อเวลาในทุกจุดนัดหมายและแต่งกายสุภาพรัดกุม</li>
-                    <li>งดเครื่องดื่มแอลกอฮอล์และสารเสพติดทุกชนิดตลอดระยะเวลาค่าย</li>
                     <li>เคารพขนบธรรมเนียม วิถีชุมชน และดูแลทรัพย์สินมีค่าส่วนตัว</li>
                     <li>ปฏิบัติตามกฎที่พักและห้องน้ำแยกโซนอย่างเคร่งครัด</li>
                 </ul>
@@ -669,8 +691,8 @@
 <footer>
     <div class="container">
         <div class="footer-logo">มหาวิทยาลัยสิบศิลป์ x มหาวิทยาลัยเบงจันทร์</div>
-        <p style="font-size: 0.9rem; opacity: 0.6;">ร่วมกับ มหาวิทยาลัยช่อแก้ว & ชุมชนตำบลนาจาน อำเภอสีชมพู</p>
-        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Volunteer Rocket Festival Project. All rights reserved.</p>
+        <p style="font-size: 0.85rem; opacity: 0.7;">ร่วมกับ มหาวิทยาลัยช่อแก้ว & ชุมชนตำบลนาจาน อำเภอสีชมพู</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Volunteer Rocket Festival Project. All rights reserved.</p>
     </div>
 </footer>
 
